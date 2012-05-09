@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xml:lang="en"
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	>
+	<jsp:directive.page contentType="text/html"/>
+	<jsp:output
+		doctype-root-element="html"
+		doctype-public="-//W3C//DTD XHTML 1.1//EN"
+		doctype-system="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"
+		/>
+	<jsp:directive.page isErrorPage="true"/>
+	<head>
+		<title><c:out value="ERROR ${pageContext.errorData.statusCode}"/></title>
+	</head>
+	<body>
+		<h1><c:out value="ERROR ${pageContext.errorData.statusCode}"/></h1>
+		<p>Sorry, an error occurred during your request for <c:out value="${pageContext.errorData.requestURI}"/>.</p>
+	</body>
+</html>
